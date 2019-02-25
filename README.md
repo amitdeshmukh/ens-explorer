@@ -5,15 +5,18 @@ This application visualizes recent [ENS](https://ens.domains/) transactions with
 ## Installation
 
 ```shell
-git clone https://github.com/amitdeshmukh/ens-explorer.git
+$ git clone https://github.com/amitdeshmukh/ens-explorer.git
 ```
 
 ```shell
-npm install
+$ npm install
 ```
 
+## Usage
+Currently, the script will print `BidRevealed` logs to the console. The script is meant to be used within a Vue.js model that provides a user interface via a web browser.
+
 ```shell
-node ens.js
+$ node ens.js
 
 { block: 7265566,
   event: 'BidRevealed',
@@ -40,7 +43,4 @@ node ens.js
   ...
   ...
 ```
-
-## Usage
-Currently, the script will print `BidRevealed` logs to the console. This script is meant to be used within a Vue.js model that provides a user interface via a browser.
 
