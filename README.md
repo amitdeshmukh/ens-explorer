@@ -39,7 +39,7 @@ Currently, the app will display:
 - Individual `BidRevealed` events are also displayed.
 
 
-[![Demo](src/assets/ens-explorer.png)](src/assets/ens-explorer-video.mov)
+![Screenshot](src/assets/ens-explorer.png)
 
 ## Notes
 
