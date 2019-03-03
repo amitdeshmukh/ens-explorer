@@ -32,13 +32,16 @@ The app will perform some calculations as new data comes in. This process can ta
 Currently, the app will display:
 - A summary of ENS contract events
 
-Some metrics related to `BidRevealed` events:
-- Top 5 NameHashes by bid value
-- Top 5 bidding accounts
+- Metrics related to `BidRevealed` events:
+  - Top 5 NameHashes by bid value
+  - Top 5 bidding accounts
 
-Individual `BidRevealed` events are also displayed.
+- Individual `BidRevealed` events are also displayed.
 
-## Note
+
+[![Demo](src/assets/ens-explorer.png)](src/assets/ens-explorer-video.mov)
+
+## Notes
 
 The app uses [Infura](https://infura.io/) websockets to connect to the Ethereum mainnet, and receive ENS contract events. This was done so that using the app would not require to setup a  local geth/parity node, and events can be streamed into the app immediately.
 
@@ -49,4 +52,3 @@ The drawback of this approach however, is that Infura websockets seem to not pro
 1. Write Unit Tests
 2. Read web3 parameters from config
 3. Implement additional Event metrics
-
