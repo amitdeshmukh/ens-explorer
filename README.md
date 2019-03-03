@@ -25,15 +25,28 @@ $ npm test
 
 Browse to [http://localhost:8080](http://localhost:8080)
 
-Currently, the app will display a summary of ENS contract events, and some basic metrics related to `BidRevealed` events:
+Please allow events to stream into the app.
+
+The app will perform some calculations as new data comes in. This process can take about half a minute.
+
+Currently, the app will display:
+- A summary of ENS contract events
+
+Some metrics related to `BidRevealed` events:
 - Top 5 NameHashes by bid value
 - Top 5 bidding accounts
 
 Individual `BidRevealed` events are also displayed.
 
+## Note
+
+The app uses [Infura](https://infura.io/) websockets to connect to the Ethereum mainnet, and receive ENS contract events. This was done so that using the app would not require to setup a  local geth/parity node, and events can be streamed into the app immediately.
+
+The drawback of this approach however, is that Infura websockets seem to not provide event logs that are older than 2 days. The performance is optimal when events within the past 1 day of blocks are requested.
+
 ## Todo
 
 1. Write Unit Tests
-2. Implement config file
-3. Implement additional metrics
+2. Read web3 parameters from config
+3. Implement additional Event metrics
 
