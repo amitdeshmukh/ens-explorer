@@ -76,7 +76,7 @@ import abiDecoder from 'abi-decoder'
 import ensContractABI from '../assets/ensContractABI'
 
 // Bootstrap Web3
-const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://mainnet.infura.io/ws'))
+const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://mainnet.infura.io/ws/v3/311d6f6491fa42c6b984cecadd45db6c'))
 abiDecoder.addABI(ensContractABI);
 const ensContractAddress = '0x6090A6e47849629b7245Dfa1Ca21D94cd15878Ef'
 const ensContract = new web3.eth.Contract(ensContractABI, ensContractAddress)
