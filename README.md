@@ -21,6 +21,9 @@ $ npm run dev
 # build for production with minification
 $ npm run build
 
+# unit tests
+$ npm test
+
 ```
 
 ## Installation Using Docker
@@ -65,6 +68,6 @@ The drawback of this approach however, is that Infura websockets seem to not pro
 
 ## Todo
 
-1. Write Unit Tests
-2. Read web3 parameters from config
-3. Implement additional Event metrics
+1. Unit Test for Vue component
+2. Read Web3 parameters from config
+3. Implement more ENS Event metrics
