@@ -3,6 +3,7 @@
 This application visualizes recent [ENS](https://ens.domains/) transactions with a focus on `BidRevealed` event logs.
 
 ## Installation
+Install from the repo using the instructions below, or use [Docker](https://www.docker.com/)
 
 ```bash
 # clone this repo
@@ -17,17 +18,23 @@ $ npm run dev
 # build for production with minification
 $ npm run build
 
-# run all tests
-$ npm test
+```
+
+## Installation Using Docker
+
+```bash
+# Run docker-compose
+$ docker-compose build && docker-compose up
+
 ```
 
 ## Usage
 
 Browse to [http://localhost:8080](http://localhost:8080)
 
-Please allow events to stream into the app.
+ENS events will begin to stream into the app.
 
-The app will perform some calculations as new data comes in. This process can take about half a minute.
+The app will perform some calculations as new data comes in. This process depends on the number of events emitted by the ENS contract within the past day.
 
 Currently, the app will display:
 - A summary of ENS contract events
