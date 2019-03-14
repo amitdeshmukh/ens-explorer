@@ -9,6 +9,9 @@ Install from the repo using the instructions below, or use [Docker](https://www.
 # clone this repo
 $ git clone https://github.com/amitdeshmukh/ens-explorer.git
 
+# change directory
+$ cd ens-explorer
+
 # install dependencies
 $ npm install
 
@@ -23,6 +26,12 @@ $ npm run build
 ## Installation Using Docker
 
 ```bash
+# clone this repo
+$ git clone https://github.com/amitdeshmukh/ens-explorer.git
+
+# change directory
+$ cd ens-explorer
+
 # Run docker-compose
 $ docker-compose build && docker-compose up
 
