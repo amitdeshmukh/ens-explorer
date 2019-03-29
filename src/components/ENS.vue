@@ -27,6 +27,7 @@
           <h3 class="card-header">Top 5 NameHashes by Bid Value</h3>
           <div v-for="hash in Object.keys(nameHashes).sort((x,y) => {return nameHashes[x]-nameHashes[y]}).reverse().slice(0,5)" :key="hash" class="card-body">
             <dd>{{ hash }}</dd>
+            <dt>Bids {{ bidsByNameHash[hash] }} <dt>
             <dt>ETH {{ nameHashes[hash] }} </dt>
           </div>
         </div>
@@ -98,7 +99,8 @@ export default {
         bids: [],
       },
       nameHashes: {},
-      bidders: {}
+      bidders: {},
+      bidsByNameHash: {},
     }
   },
 
@@ -165,6 +167,9 @@ export default {
 
                     //Add to bidders
                     this.bidders[o.owner] = this.bidders[o.owner] ? this.bidders[o.owner] + parseFloat(o.value) : parseFloat(o.value)
+
+                    // Bids per hash
+                    this.bidsByNameHash[o.hash] = this.bidsByNameHash[o.hash] ? this.bidsByNameHash[o.hash] + 1 : 1
                   }
                 })
               })
